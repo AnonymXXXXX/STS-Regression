@@ -1,0 +1,93 @@
+Some weights of the model checkpoint at ../../models/bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'bert.pooler.dense.weight', 'cls.predictions.transform.dense.bias', 'bert.pooler.dense.bias', 'cls.predictions.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+INFO:logger:load best model with epoch: 0 and dev score: 81.54748617002898
+DEBUG:root:***** Transfer task : STS12 *****
+
+
+DEBUG:root:MSRpar : pearson = 0.6330, spearman = 0.6317
+DEBUG:root:MSRvid : pearson = 0.8876, spearman = 0.8978
+DEBUG:root:SMTeuroparl : pearson = 0.4289, spearman = 0.5725
+DEBUG:root:surprise.OnWN : pearson = 0.6457, spearman = 0.6669
+DEBUG:root:surprise.SMTnews : pearson = 0.5490, spearman = 0.4396
+DEBUG:root:ALL : Pearson = 0.8154,             Spearman = 0.7294
+DEBUG:root:ALL (weighted average) : Pearson = 0.6566,             Spearman = 0.6710
+DEBUG:root:ALL (average) : Pearson = 0.6289,             Spearman = 0.6417
+
+DEBUG:root:***** Transfer task : STS13 (-SMT) *****
+
+
+DEBUG:root:FNWN : pearson = 0.5010, spearman = 0.4991
+DEBUG:root:headlines : pearson = 0.7191, spearman = 0.7453
+DEBUG:root:OnWN : pearson = 0.6999, spearman = 0.7304
+DEBUG:root:ALL : Pearson = 0.6781,             Spearman = 0.7164
+DEBUG:root:ALL (weighted average) : Pearson = 0.6845,             Spearman = 0.7087
+DEBUG:root:ALL (average) : Pearson = 0.6400,             Spearman = 0.6583
+
+DEBUG:root:***** Transfer task : STS14 *****
+
+
+DEBUG:root:deft-forum : pearson = 0.5589, spearman = 0.5903
+DEBUG:root:deft-news : pearson = 0.6870, spearman = 0.7173
+DEBUG:root:headlines : pearson = 0.7573, spearman = 0.7686
+DEBUG:root:images : pearson = 0.8392, spearman = 0.8113
+DEBUG:root:OnWN : pearson = 0.7337, spearman = 0.7702
+DEBUG:root:tweet-news : pearson = 0.7379, spearman = 0.6815
+DEBUG:root:ALL : Pearson = 0.7046,             Spearman = 0.7150
+DEBUG:root:ALL (weighted average) : Pearson = 0.7357,             Spearman = 0.7346
+DEBUG:root:ALL (average) : Pearson = 0.7190,             Spearman = 0.7232
+
+DEBUG:root:***** Transfer task : STS15 *****
+
+
+DEBUG:root:answers-forums : pearson = 0.5694, spearman = 0.5529
+DEBUG:root:answers-students : pearson = 0.7264, spearman = 0.7362
+DEBUG:root:belief : pearson = 0.6938, spearman = 0.6863
+DEBUG:root:headlines : pearson = 0.7878, spearman = 0.8100
+DEBUG:root:images : pearson = 0.8804, spearman = 0.9038
+DEBUG:root:ALL : Pearson = 0.7798,             Spearman = 0.7987
+DEBUG:root:ALL (weighted average) : Pearson = 0.7566,             Spearman = 0.7674
+DEBUG:root:ALL (average) : Pearson = 0.7316,             Spearman = 0.7378
+
+DEBUG:root:***** Transfer task : STS16 *****
+
+
+DEBUG:root:answer-answer : pearson = 0.5840, spearman = 0.6386
+DEBUG:root:headlines : pearson = 0.7635, spearman = 0.7891
+DEBUG:root:plagiarism : pearson = 0.7175, spearman = 0.7320
+DEBUG:root:postediting : pearson = 0.7655, spearman = 0.8235
+DEBUG:root:question-question : pearson = 0.6107, spearman = 0.6012
+DEBUG:root:ALL : Pearson = 0.6919,             Spearman = 0.7242
+DEBUG:root:ALL (weighted average) : Pearson = 0.6896,             Spearman = 0.7198
+DEBUG:root:ALL (average) : Pearson = 0.6882,             Spearman = 0.7169
+
+DEBUG:root:
+
+***** Transfer task : STSBenchmark*****
+
+
+DEBUG:root:train : pearson = 0.7880, spearman = 0.7926
+DEBUG:root:dev : pearson = 0.7943, spearman = 0.8155
+DEBUG:root:test : pearson = 0.7499, spearman = 0.7790
+DEBUG:root:ALL : Pearson = 0.7844,             Spearman = 0.7977
+DEBUG:root:ALL (weighted average) : Pearson = 0.7830,             Spearman = 0.7944
+DEBUG:root:ALL (average) : Pearson = 0.7774,             Spearman = 0.7957
+
+DEBUG:root:
+
+***** Transfer task : SICKRelatedness*****
+
+
+DEBUG:root:train : pearson = 0.6868, spearman = 0.7064
+DEBUG:root:dev : pearson = 0.6498, spearman = 0.6883
+DEBUG:root:test : pearson = 0.6817, spearman = 0.7021
+DEBUG:root:ALL : Pearson = 0.6825,             Spearman = 0.7034
+DEBUG:root:ALL (weighted average) : Pearson = 0.6824,             Spearman = 0.7034
+DEBUG:root:ALL (average) : Pearson = 0.6728,             Spearman = 0.6989
+
+------ test ------
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| 72.94 | 71.64 | 71.50 | 79.87 | 72.42 |    77.90     |      70.21      | 73.78 |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
